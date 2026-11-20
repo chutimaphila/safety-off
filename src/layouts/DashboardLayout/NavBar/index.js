@@ -49,10 +49,32 @@ import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedI
 import HistoryOutlinedIcon from '@material-ui/icons/HistoryOutlined';
 import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import DriveEtaOutlinedIcon from '@material-ui/icons/DriveEtaOutlined';
+import EqualizerOutlinedIcon from '@material-ui/icons/EqualizerOutlined';
 
 import NavItem from './NavItem';
 
 const navConfig = [
+  {
+    subheader: 'ระบบเจ้าหน้าที่ความปลอดภัย (จป.)',
+    items: [
+      {
+        title: 'ข้อมูลพนักงานขับรถ',
+        icon: DriveEtaOutlinedIcon,
+        href: '/app/safety/drivers'
+      },
+      {
+        title: 'ภาพรวมอุบัติเหตุ',
+        icon: EqualizerOutlinedIcon,
+        href: '/app/safety/dashboard'
+      },
+      {
+        title: 'แจ้งและติดตามอุบัติเหตุ',
+        icon: ReportProblemOutlinedIcon,
+        href: '/app/safety/accidents'
+      }
+    ]
+  },
   {
     subheader: 'แผนกยานพาหนะ',
     items: [

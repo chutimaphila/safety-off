@@ -1,5 +1,3 @@
-import axios from 'src/utils/axios';
-
 // ข้อมูลจำลองอ้างอิงโครงสร้างจาก QUERY 1 (vehicles_data + employee_mt + customer_data)
 const MOCK_VEHICLES = [
   {
@@ -17,7 +15,7 @@ const MOCK_VEHICLES = [
     VH_CHECKUP_DATE: '2026-12-15',
     TAX_EXP_DATE: '2027-01-31',
     ACT_EXP_DATE: '2027-01-31',
-    INRC_EXP_DATE: '2027-03-10',
+    INRC_EXP_DATE: '2027-03-10'
   },
   {
     external_vehicle_id: 102,
@@ -34,7 +32,7 @@ const MOCK_VEHICLES = [
     VH_CHECKUP_DATE: '2026-11-25',
     TAX_EXP_DATE: '2026-12-05',
     ACT_EXP_DATE: '2026-12-05',
-    INRC_EXP_DATE: '2027-02-15',
+    INRC_EXP_DATE: '2027-02-15'
   }
 ];
 

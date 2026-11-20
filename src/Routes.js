@@ -8,7 +8,7 @@ import HomeView from 'src/views/pages/HomeView';
 import LoadingScreen from 'src/components/LoadingScreen';
 import AuthGuard from 'src/components/AuthGuard';
 import GuestGuard from 'src/components/GuestGuard';
-import vehicleRoutes from 'src/modules/vehicles/routes';
+import safetyRoutes from 'src/modules/safety/routes';
 
 // เปิดแสดงหน้าตัวอย่างของ Template เป็นค่าเริ่มต้นตอน Dev
 // และปิดอัตโนมัติเมื่อตั้งค่า REACT_APP_ENABLE_TEMPLATE_DEMO=false ตอน Build Production
@@ -317,6 +317,12 @@ const routesConfig = [
     exact: true,
     path: '/',
     // หน้าแรกสุดชี้ไปที่ระบบตรวจเช็คยานพาหนะโดยตรง (หากยังไม่ Login จะถูก AuthGuard ส่งไป /login)
+    component: () => <Redirect to="/app/safety/drivers" />
+  },
+  {
+    exact: true,
+    path: '/',
+    // หน้าแรกสุดชี้ไปที่ระบบตรวจเช็คยานพาหนะโดยตรง (หากยังไม่ Login จะถูก AuthGuard ส่งไป /login)
     component: () => <Redirect to="/app/vehicles/dashboard" />
   },
   {
@@ -354,11 +360,9 @@ const routesConfig = [
       {
         exact: true,
         path: '/app',
-        component: () => <Redirect to="/app/vehicles/dashboard" />
+        component: () => <Redirect to="/app/safety/drivers" />
       },
-      // โมดูลระบบตรวจเช็คยานพาหนะ (Production Module)
-      ...vehicleRoutes,
-      // หน้าตัวอย่างของ Template (ทำงานเฉพาะตอน isTemplateDemoEnabled = true)
+      ...safetyRoutes,
       ...templateDemoAppRoutes,
       {
         component: () => <Redirect to="/404" />
