@@ -56,7 +56,7 @@ import NavItem from './NavItem';
 
 const navConfig = [
   {
-    subheader: 'ระบบเจ้าหน้าที่ความปลอดภัย (จป.)',
+    subheader: 'แผนกเจ้าหน้าที่ความปลอดภัย (จป.)',
     items: [
       {
         title: 'ข้อมูลพนักงานขับรถ',
